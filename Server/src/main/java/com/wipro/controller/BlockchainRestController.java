@@ -22,6 +22,7 @@ public class BlockchainRestController {
 	private BlockchainService blockChainService;
 	
 	@GetMapping("transactions/{name}")
+	@CrossOrigin(origins = "http://localhost:4200")
 	public List<Transaction> getTransactionsByName(@PathVariable String name){
 		
 		return blockChainService.findTransactions(name);
@@ -39,6 +40,13 @@ public class BlockchainRestController {
 	public void createTransaction(@RequestParam Integer amount, @RequestParam String sender, @RequestParam String recipient) {
 		
 		blockChainService.addTransaction(amount, sender, recipient);
+		
+	}
+
+	@GetMapping("mine")
+	public boolean mine() throws NoSuchAlgorithmException {
+		
+		return blockChainService.mine();
 		
 	}
 

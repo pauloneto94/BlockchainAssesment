@@ -5,10 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SendTransactionComponent } from './send-transaction/send-transaction.component';
+import { BlockComponent } from './block/block.component';
+import { BalanceComponent } from './balance/balance.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    SendTransactionComponent,
+    BlockComponent,
+    BalanceComponent
   ],
   imports: [
     BrowserModule,

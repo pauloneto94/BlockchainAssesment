@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlockchainService } from './shared/blockchain.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'client';
+  title = 'PJChain';
+
+  constructor(private blockchainService: BlockchainService){
+
+    //VERIFICAR SERVICE COMPARADO A WALLET
+
+  }
+
+  onMine(): boolean{
+
+    return true;
+
+  }
+
 }
